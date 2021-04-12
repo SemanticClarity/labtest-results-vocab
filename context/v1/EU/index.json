@@ -1,0 +1,94 @@
+{
+    "@context" : {
+        "@version": 1.1,
+        "@protected": true,
+        "id": "@id",
+        "type": "@type",
+
+        "description": "http://schema.org/description",
+        "identifier": "http://schema.org/identifier",
+        "name": "http://schema.org/name",
+
+        "TestResultCertificate": {
+            "@id": "https://w3id.org/antigentestresults#TestResultCertificate",
+
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+
+                "id": "@id",
+                "type": "@type",
+
+                "description": "http://schema.org/description",
+                "identifier": "http://schema.org/identifier",
+                "name": "http://schema.org/name",
+                "issuer": ""
+            }
+        },
+        "TestRecipient": {
+            "@id": "https://w3id.org/antigentestresults#TestRecipient",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "birthDate": {
+                    "@id": "http://hl7.eu/fhir/ig/dgc/Patient.birthDate",
+                    "@type":"http://www.w3.org/2001/XMLSchema#string"
+                },
+                "familyName":{
+                    "@id": "http://hl7.eu/fhir/ig/dgc/Patient.name.familyName",
+                    "@type":"http://www.w3.org/2001/XMLSchema#string"
+                },
+                "gender": {
+                    "@id":"http://hl7.org/fhir/gender-identity",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "givenName": {
+                    "@id":"http://hl7.eu/fhir/ig/dgc/Patient.name.givenName",
+                    "@type":"http://www.w3.org/2001/XMLSchema#string"
+                }
+            }
+        },
+        "TestEvent": {
+            "@id": "https://w3id.org/antigentestresults#TestEvent",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "testName": {
+                    "@id": "http://hl7.eu/fhir/ig/dgc/ValueSet/loinc-tests-covid-19",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "testType" : {
+                    "@id": "http://hl7.eu/fhir/ig/dgc/ValueSet/covid-19-lab-methods",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "sampleOriginType": {
+                    "@id": "http://hl7.org/fhir/ValueSet/body-site",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "sampleCollectionDateTime": {
+                    "@id": "http://hl7.eu/fhir/ig/dgc/DiagnosticReport.specimen.collectedDateTime",
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+                },
+                "testResult" : {
+                    "@id": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "testCenter" : {
+                    "@id": "http://hl7.eu/fhir/ig/dgc/Location",
+                    "@type": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                "testValidatorId" : {
+                    "@id":"http://hl7.eu/fhir/ig/dgc/DiagnosticReport.resultsIntepreter",
+                    "@type":"http://www.w3.org/2001/XMLSchema#string"
+
+                },
+                "countryOfTestAdminstration" : "https://w3id.org/vaccination#countryOfVaccination"
+            }
+        }
+    }
+
+}
