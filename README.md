@@ -1,2 +1,2 @@
 # labtest-results-vocab
-FHIR based vocabulary for covid-19 test results
+FHIR based vocabulary mapping for covid-19 test results based on minimum data set requirements outlined in [EU's Digital Green Card spec](https://ec.europa.eu/health/sites/health/files/preparedness_response/docs/covid-19_rat_common-list_en.pdf)
